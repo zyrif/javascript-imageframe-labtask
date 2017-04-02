@@ -1,6 +1,33 @@
 <html>
 <head>
 	<title> Digital Album </title>
+	<script type="text/javascript">
+		var i = 2;
+		function prev(){
+			if(i==1){
+				i = 3;
+				display(i);
+			}
+			else {
+				display(--i);
+			}
+		}
+		
+		function next(){
+			if(i==3){
+				i = 1;
+				display(i);
+			}
+			else {
+				display(++i);
+			}
+		}
+		
+		function display(number){
+			var image = document.getElementById("frame");
+			image.src = "images/" + number + ".jpg";
+		}
+	</script>
 </head>
 
 <body>
@@ -21,12 +48,12 @@
 			</tr>			
 			
 			<tr>
-				<td colspan="4"> <img width="600" id="frame" src="images/3.jpg"/> </td>
+				<td colspan="4"> <img width="600" id="frame" src="images/2.jpg"/> </td>
 			</tr>			
 			
 			<tr>
-				<td align="right" colspan="2"> <input type="button" value="Previous" onclick="" </td>
-				<td colspan="2"> <input type="button" value="Next" onclick="" </td>
+				<td align="right" colspan="2"> <input type="button" value="Previous" onclick="prev()" </td>
+				<td colspan="2"> <input type="button" value="Next" onclick="next()" </td>
 			</tr>
 			
 		</table>
