@@ -6,7 +6,7 @@
 		function prev(){
 			if(i==1){
 				i = 3;
-				display(i);
+				display(i),1000;
 			}
 			else {
 				display(--i);
@@ -27,6 +27,8 @@
 			var image = document.getElementById("frame");
 			image.src = "images/" + number + ".jpg";
 		}
+		
+		setInterval(next, 1000);
 	</script>
 </head>
 
